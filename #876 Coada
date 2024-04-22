@@ -1,0 +1,37 @@
+#include <iostream>
+#include<queue>
+
+using ui=unsigned int;
+using namespace std;
+
+queue<int>coada;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    ui n;
+    cin>>n;
+    while(n){
+        string comand;
+        cin>>comand;
+        if(comand=="push")
+        {
+            int nr;
+            cin>>nr;
+            coada.push(nr);
+        }
+        else if(comand=="front")
+        {
+            cout<<coada.front()<<"\n";
+        }
+        else{
+            coada.pop();
+        }
+        n--;
+    }
+    return 0;
+}
+/*ifstream cin("");
+ofstream cout("");*/
